@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- < Bulma CSS > -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+    <!-- < FontAwesome > -->
+    <script defer src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" integrity="sha384-vuFJ2JiSdUpXLKGK+tDteQZBqNlMwAjhZ3TvPaDfN9QmbPb7Q8qUpbSNapQev3YF" crossorigin="anonymous"></script>
+
+    <!-- < Comic Sans > -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+
+<body class="py-4 px-1">
+    <style>
+        .box-hover{
+            height: 65px;
+            width: 65px;
+            cursor: crosshair;
+        }
+        body{
+            transition: all 0.3s ease-in-out;
+        }
+        #panelSaludo{
+            font-family: 'Comic Neue';
+            font-size: 10px;
+        }
+    </style>
+    <div class="container has-background-primary-dark box p-3">
+        <h1 class="title text-center has-text-centered">Ejercicios con JavaScript</h1>
+    </div>
+    <div class="container has-background-primary-dark box p-3">
+        <h2 class="subtitle text-center">OnMouseOver()</h2>
+        <div class="is-flex is-justify-content-space-around is-flex-wrap-wrap">
+            <div class="box m-2 box-hover" style="background-color: violet"></div>
+            <div class="box m-2 box-hover" style="background-color: yellow"></div>
+            <div class="box m-2 box-hover" style="background-color: black"></div>
+            <div class="box m-2 box-hover" style="background-color: coral"></div>
+            <div class="box m-2 box-hover" style="background-color: cyan"></div>
+        </div>
+    </div>
+    <div class="container has-background-primary-dark box p-3">
+        <h2 class="subtitle text-center">Conversor monetario.</h2>
+        <form id="conversor">
+            <div class="field is-horizontal">
+                <div class="field-body">
+                    <div class="field">
+                        <div class="control mb-1">
+                            <label class="radio">
+                                <input type="radio" value="peso" name="mi-divisa" checked>Pesos
+                            </label>
+                            <label class="radio">
+                                <input type="radio" value="dolar" name="mi-divisa">Dolares
+                            </label>
+                            <label class="radio">
+                                <input type="radio" value="euro" name="mi-divisa">Euros
+                            </label>
+                        </div>
+                        <p class="control is-expanded has-icons-left">
+                            <input class="input" name="entrada" type="number" min="1" required placeholder="Introduce el numero de divisas">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-dollar-sign"></i>
+                            </span>
+                        </p>
+                    </div>
+                    <div class="field">
+                        <div class="control mb-1">
+                            <label class="radio">
+                                <input type="radio" value="peso" name="conv-a">Pesos
+                            </label>
+                            <label class="radio">
+                                <input type="radio" value="dolar" name="conv-a" checked>Dolares
+                            </label>
+                            <label class="radio">
+                                <input type="radio" value="euro" name="conv-a">Euros
+                            </label>
+                        </div>
+                        <p class="control is-expanded has-icons-left has-icons-right">
+                            <input class="input is-success" name="salida" type="number" disabled placeholder="Resultado">
+                            <span class="icon is-small is-left">
+                                <i class="fas fa-hand-holding-usd"></i>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link">Convertir</button>
+                    <span id="fecha">Cambio obtenido del BM via REST el: </span>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="container has-background-primary-dark box p-3">
+        <h2 class="subtitle text-center">Password</h2>
+        <form id="contrasena">
+            <div class="field">
+                <p class="control has-icons-left">
+                  <input class="input" required name="entrada" type="password" placeholder="Password">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-lock"></i>
+                  </span>
+                </p>
+            </div>
+            <div class="control">
+                <button class="button is-link">Probar</button>
+                <span>La contrasena es fesar, Tipo de cifrado: MD5</span>
+            </div> 
+        </form>
+    </div>
+    <div class="container has-background-primary-dark box p-3">
+        <h2 class="subtitle text-center">Saludo horario</h2>
+        <form id="saludo">
+            <div class="field">
+                <p class="control has-icons-left">
+                  <input class="input" required name="entrada" type="text" placeholder="Nombre">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-hand-paper"></i>
+                  </span>
+                </p>
+            </div>
+            <div class="control">
+                <button class="button is-link">Saludar</button>
+                <span id="panelSaludo"></span>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
