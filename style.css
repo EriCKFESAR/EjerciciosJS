@@ -1,0 +1,18 @@
+/* < Bulma CSS > */
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css";
+
+/* < Comic Sans > */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+.box-hover{
+    height: 65px;
+    width: 65px;
+    cursor: crosshair;
+}
+body{
+    transition: all 0.3s ease-in-out;
+}
+#panelSaludo{
+    font-family: 'Comic Neue';
+    font-size: 10px;
+}
